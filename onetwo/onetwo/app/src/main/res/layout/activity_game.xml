@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bns">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity"
+    >
+
+    <!--입력상자툴 레이아웃-->
+    <LinearLayout android:id="@+id/layout1"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:orientation="horizontal">
+        <!--입력상자-->
+        <EditText android:id="@+id/ansEditTextId"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:hint="값을 입력하세요."
+            android:inputType="number"
+            android:maxLength="4"
+            android:layout_weight="1"/>
+        <!--전달버튼-->
+        <Button  android:id="@+id/ansBtnId"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="입력"
+            android:maxLines="1"
+            android:layout_weight="4"
+            android:onClick="mOnClick"/>
+    </LinearLayout>
+
+
+    <!--게임진행상황 레이아웃-->
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:orientation="horizontal"
+        android:layout_below="@id/layout1"  >
+        <!--게임진행상황 뷰-->
+        <ListView
+            android:id="@+id/ansListId"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+
+</RelativeLayout>
+
